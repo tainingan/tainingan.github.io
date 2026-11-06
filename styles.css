@@ -31,13 +31,13 @@ h3 { font-size: 22px; font-weight: 600; margin-bottom: 17px; letter-spacing: -.2
 nav { display: flex; gap: 30px; align-items: center; font-size: 15px; }
 nav a { white-space: nowrap; }
 nav a:hover { text-decoration: underline; }
-.intro { display: grid; grid-template-columns: minmax(0, 1fr) 230px; gap: 72px; align-items: start; padding: 60px 0 58px; }
-.intro-copy { max-width: 45rem; }
+.intro { display: grid; grid-template-columns: 230px minmax(0, 1fr); grid-template-areas: "portrait copy"; gap: 72px; align-items: start; padding: 60px 0 58px; }
+.intro-copy { grid-area: copy; max-width: 45rem; }
 .intro-copy h1 { margin-bottom: 25px; }
 .intro-copy > p { font-size: 17px; line-height: 1.85; }
 .intro-copy > p:first-of-type { font-size: 18px; line-height: 1.75; }
 .intro-links { display: flex; flex-wrap: wrap; gap: 29px; font-size: 16px; margin-top: 27px; }
-.portrait { margin-top: 16px; }
+.portrait { grid-area: portrait; margin-top: 16px; }
 .portrait img { display: block; width: 100%; height: auto; border-radius: 5px; }
 .portrait figcaption { font-size: 12px; line-height: 1.6; color: var(--muted); margin-top: 12px; text-align: center; }
 .section { border-top: 1px solid var(--line); padding: 44px 0 51px; }
@@ -107,7 +107,7 @@ footer a { white-space: nowrap; text-decoration: none; }
 .viewer-actions button { width: 44px; height: 44px; border: 1px solid var(--line); border-radius: 3px; background: white; font-size: 22px; }
 @media (max-width: 950px) {
   .page { padding: 0 32px; }
-  .intro { grid-template-columns: minmax(0, 1fr) 195px; gap: 40px; padding: 46px 0; }
+  .intro { grid-template-columns: 195px minmax(0, 1fr); gap: 40px; padding: 46px 0; }
   .intro-copy > p { font-size: 16px; }
   .gallery-grid, .video-grid { gap: 30px 20px; }
   .photo-title { font-size: 15px; }
@@ -118,7 +118,7 @@ footer a { white-space: nowrap; text-decoration: none; }
   .site-header { padding: 23px 0; gap: 18px; }
   .home-link { font-size: 22px; }
   nav { gap: 19px; font-size: 14px; }
-  .intro { grid-template-columns: minmax(0, 1fr) 160px; gap: 28px; }
+  .intro { grid-template-columns: 160px minmax(0, 1fr); gap: 28px; }
   h1 { font-size: 42px; }
   h2 { font-size: 32px; }
   h3 { font-size: 20px; }
